@@ -26,6 +26,61 @@
           <argument>
             <kind>1</kind>
             <string>image_speed = 0.3;
+grav = 0.2;
+hsp = 0;
+vsp = 0;
+movespeed = 3;
+jumpspeed = 6;
+
+    
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///inputs
+move_right = keyboard_check(ord("D"));
+move_left = -keyboard_check(ord("A"));
+move_jump = keyboard_check_pressed(vk_space);
+
+//reageren op inputs
+move = move_left + move_right;   //dus rechts of links is -1 of 1
+hsp = move * movespeed;
+if vsp &lt; 10  vsp += grav;
+
+if place_meeting(x, y+1, obj_floor)
+    {
+    vsp = move_jump * -jumpspeed;
+    }
+    
+//horizontaal col
+if place_meeting(x+hsp, y, obj_floor)
+    {
+    while (!place_meeting(x+sign(hsp), y, obj_floor))
+    {
+        x += sign(hsp);
+    }
+}
+
+x += hsp;
+y += vsp;
 
 </string>
           </argument>

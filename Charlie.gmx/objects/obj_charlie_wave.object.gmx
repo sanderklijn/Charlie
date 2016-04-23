@@ -50,12 +50,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if keyboard_check_pressed(vk_right)
-    {
-    x += 3;
-    }
-
-</string>
+            <string></string>
           </argument>
         </arguments>
       </action>

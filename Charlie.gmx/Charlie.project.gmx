@@ -9,12 +9,14 @@
     <sprite>sprites\spr_charlie_wave</sprite>
     <sprite>sprites\spr_charlie_idle</sprite>
     <sprite>sprites\spr_charlie_right</sprite>
+    <sprite>sprites\spr_floor</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <objects name="objects">
     <object>objects\obj_charlie_wave</object>
     <object>objects\obj_charlie_idle</object>
+    <object>objects\obj_floor</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
